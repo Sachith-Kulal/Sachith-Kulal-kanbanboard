@@ -29,7 +29,7 @@ class TimerController extends GetxController {
     isTimerActive.value = await SessionManagement.isTimerActive();
 
     if (isTimerActive.value) {
-      CustomSnackBarView.showCustomErrorToast(message: "msg");
+      CustomSnackBarView.showCustomErrorToast(message: "The timer is already activated on different task");
     } else {
       await SessionManagement.setTimer(timerTaskId: id, counter: counterValue);
       timerTaskId = id;
