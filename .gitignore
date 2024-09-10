@@ -1,0 +1,72 @@
+# Flutter specific
+.flutter-plugins
+.flutter-plugins-deps
+.flutter-versions
+.packages
+.pub
+.pub-cache
+build/
+flutter_*.png
+
+# iOS specific
+ios/Pods/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Flutter/Flutter.podspec.json
+ios/Flutter/flutter_assets/
+ios/.symlinks/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+
+# Android specific
+android/.gradle/
+android/app/build/
+android/captures/
+android/gradle/
+android/gradle-wrapper.jar
+android/gradle-wrapper.properties
+android/local.properties
+android/.idea/
+android/.gradle/
+android/gradle/
+android/gradle-wrapper.properties
+
+# macOS specific
+macos/Flutter/Flutter.framework
+macos/Flutter/Flutter.podspec
+macos/Flutter/Flutter.podspec.json
+macos/Flutter/flutter_assets/
+macos/.symlinks/
+
+# Linux specific
+linux/Flutter/Flutter.framework
+linux/Flutter/Flutter.podspec
+linux/Flutter/Flutter.podspec.json
+linux/Flutter/flutter_assets/
+linux/.symlinks/
+
+# Windows specific
+windows/Flutter/Flutter.framework
+windows/Flutter/Flutter.podspec
+windows/Flutter/Flutter.podspec.json
+windows/Flutter/flutter_assets/
+windows/.symlinks/
+
+# Others
+*.log
+*.tmp
+*.swp
+*.swo
+*.DS_Store
+*.dart_tool/
+.idea/
+*.iml
+*.ipr
+*.iws
+*.hprof
+*.gradle
+*.jks
+*.keystore
+
+# Build output
+build/
