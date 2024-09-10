@@ -32,11 +32,10 @@ class TaskController extends GetxController {
 
 
   getAllTaskList({required int tab}) async {
-
-    tab = tab;
+    this.tab = tab;
     taskResponse.value = ApiDataState.loading();
     String projectId = await SessionManagement.getProjectId();
-    String sectionId = getSectionId(tab: tab);
+    String sectionId = getSectionId(tab: this.tab);
 
     await BaseClient.safeApiCall(
         '${ConfigEnvironments.getEnvironments()['url']!}${Api.tasks}?project_id=$projectId$sectionId',
