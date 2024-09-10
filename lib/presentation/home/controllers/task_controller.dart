@@ -73,7 +73,7 @@ class TaskController extends GetxController {
         RequestType.post, onSuccess: (response) {
       if (response.body.isNotEmpty) {
         getAllTaskList(tab: tab);
-        String? name = section.where((item) => item.id == sectionID).toList().first.id;
+        String? name = section.where((item) => item.id == sectionID).toList().first.name;
         CustomSnackBarView.showCustomSuccessToast(
             message: "Task moved to ${name??""}");
       } else {
