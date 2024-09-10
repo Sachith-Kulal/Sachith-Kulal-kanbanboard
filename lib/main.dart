@@ -28,13 +28,15 @@ void main() async {
 
   await SessionManagement.setSession();
   bool isDarkMode = await SessionManagement.isDarkMode();
-  runApp(Main(initialRoute,isDarkMode));
+  String language = await SessionManagement.getLanguage();
+  runApp(Main(initialRoute,isDarkMode,language));
 }
 
 class Main extends StatelessWidget {
   final String initialRoute;
+  final String language;
   final bool isDarkMode;
-  const Main(this.initialRoute,this.isDarkMode, {super.key});
+  const Main(this.initialRoute,this.isDarkMode,this.language, {super.key});
 
   // Initialize Firebase Analytics
   static FirebaseAnalytics analytics = FirebaseAnalytics.instance;
@@ -54,7 +56,7 @@ class Main extends StatelessWidget {
       darkTheme: AppThemes.dark(context),
       themeMode: isDarkMode ? ThemeMode.dark:ThemeMode.light,
       translations: LocalizationService(),  // Localization service
-      locale: LocalizationService.locale,  // Default locale
+      locale: LocalizationService().getLocaleFromLanguage(language),  // Default locale
       fallbackLocale: LocalizationService.fallbackLocale,  // Fallback locale
       supportedLocales: LocalizationService.locales,  // Supported locales
 

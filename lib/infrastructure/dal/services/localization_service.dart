@@ -4,10 +4,10 @@ import 'package:get/get.dart';
 
 class LocalizationService extends Translations {
   // Default locale
-  static const locale = Locale('ka', 'KA');
+  static const locale = Locale('en', 'US');
 
   // fallbackLocale saves the day when the locale gets in trouble
-  static const fallbackLocale = Locale('ka', 'KA');
+  static const fallbackLocale = Locale('en', 'US');
 
   // Supported languages
   static final langs = ['English', 'Kannada'];
@@ -71,12 +71,12 @@ class LocalizationService extends Translations {
 
   // Gets locale from language, and updates the locale
   void changeLocale(String lang) {
-    final locale = _getLocaleFromLanguage(lang);
+    final locale = getLocaleFromLanguage(lang);
     Get.updateLocale(locale);
   }
 
   // Finds the locale from the language code
-  Locale _getLocaleFromLanguage(String lang) {
+  Locale getLocaleFromLanguage(String lang) {
     for (int i = 0; i < langs.length; i++) {
       if (lang == langs[i]) return locales[i];
     }

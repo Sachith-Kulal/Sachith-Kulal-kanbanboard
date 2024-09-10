@@ -30,6 +30,7 @@ android/.idea/
 android/.gradle/
 android/gradle/
 android/gradle-wrapper.properties
+.flutter-plugins-dependencies
 
 # macOS specific
 macos/Flutter/Flutter.framework
