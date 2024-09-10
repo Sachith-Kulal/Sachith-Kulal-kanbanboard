@@ -332,6 +332,7 @@ class EditTaskScreen extends GetView<EditTaskController> {
                                           top: 0,
                                           bottom: 16),
                                       child: ListView.separated(
+                                          physics: const NeverScrollableScrollPhysics(),
                                           separatorBuilder:
                                               (BuildContext context,
                                                       int index) =>
