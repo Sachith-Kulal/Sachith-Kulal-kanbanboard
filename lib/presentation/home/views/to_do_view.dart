@@ -51,6 +51,9 @@ class ToDoView extends GetView<TaskController> {
                               onCompleted: (value) {
                                 controller.taskResponse.value.data![index]
                                     .isCompleted.value = value!;
+                                controller.closeTask(
+                                    taskId: controller
+                                        .taskResponse.value.data![index].id!);
                               },
                             );
                           }),
